@@ -3,10 +3,11 @@ import Scroll from "./Components/Scroll";
 import Introduction from "./Components/Introduction";
 import BookACall from "./Components/BookACall";
 import CustomerReviews from "./Components/CustomerReview";
+import Navbar from "./Components/NavBar";
 
 function App() {
   return (
-    <>
+    <div className="bg-site-gradient min-h-screen">
       <Scroll />
       <AnimatePresence>
         <motion.div
@@ -15,12 +16,19 @@ function App() {
           exit={{ opacity: 0 }}
           className="min-h-screen bg-gray-800"
         >
-          <Introduction />
-          <CustomerReviews />
-          <BookACall />
+          <Navbar />
+          <section id="introduction">
+            <Introduction />
+          </section>
+          <section id="reviews">
+            <CustomerReviews />
+          </section>
+          <section id="contact">
+            <BookACall />
+          </section>
         </motion.div>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
