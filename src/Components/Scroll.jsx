@@ -13,7 +13,8 @@ const Scroll = () => {
         right: 0,
         height: 10,
         originX: 0,
-        backgroundColor: "black",
+        backgroundColor: "#0077B5",
+        zIndex: 1000,
       }}
     ></motion.div>
   );
