@@ -41,8 +41,10 @@ const Navbar = () => {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <BarChart3 className="w-8 h-8 text-blue-500" />
-            <span className="text-xl font-bold text-gray-900">DataViz</span>
+            <div className="w-8 h-8" >
+            <img src="../assets/COGNI logo.png" alt="" />
+            </div>
+            <span className="text-xl font-bold text-gray-500">Cognitreez</span>
           </motion.div>
 
           <div className="hidden md:flex space-x-8">
@@ -54,7 +56,7 @@ const Navbar = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-600 hover:text-blue-500 font-medium"
+                className="text-gray-500 hover:text-blue-500 font-bold"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
