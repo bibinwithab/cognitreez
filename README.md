@@ -54,7 +54,6 @@ src/
 - [x] Add a responsive customer reviews carousel.
 - [x] Integrate Framer Motion for animations.
 - [ ] Optimize accessibility features.
-- [ ] Add unit tests for critical components.
 - [ ] Deploy the application to a hosting platform.
 
 ## Scripts
