@@ -1,7 +1,42 @@
 import { motion } from "motion/react";
+import { useState } from "react";
+
 import { Clock, Calendar, Phone } from "lucide-react";
 
 const BookACall = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    date: "",
+    time: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailtoLink = generateMailtoLink(formData);
+    window.location.href = mailtoLink;
+  };
+
+  const generateMailtoLink = ({ name, company, date, time }) => {
+    const recipient = "info@cognitreez.com";
+    const subject = encodeURIComponent("Appointment Request");
+    const body = encodeURIComponent(
+      `Hello,
+
+I am ${name} from ${company} would like to book a call on ${date} at ${time}.
+Please let me know if this time works for you.
+
+Thank you!`
+    );
+
+    return `mailto:${recipient}?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +91,7 @@ const BookACall = () => {
             </div>
 
             <div className="p-8">
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Full Name
@@ -69,22 +104,38 @@ const BookACall = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Email
-                  </label>
-                  <motion.input
-                    whileFocus={{ scale: 1.01 }}
-                    type="email"
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Company
                   </label>
                   <motion.input
                     whileFocus={{ scale: 1.01 }}
                     type="text"
                     className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Date
+                  </label>
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="date"
+                    name="date"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Time
+                  </label>
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="time"
+                    name="time"
+                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <motion.button
