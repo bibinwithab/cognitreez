@@ -26,8 +26,7 @@ const itemVariants = {
 
 const Introduction = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-[#0e0e0e] to-[#0077b5] text-gray-900 overflow-hidden">
-      {/* Background Animation */}
+    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white overflow-hidden">
       <motion.div
         className="absolute inset-0 opacity-5"
         animate={{
@@ -54,11 +53,11 @@ const Introduction = () => {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-5xl md:text-6xl font-bold mb-6 text-white"
+            className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
           >
             Transform Your Data Into
             <motion.span
-              className="text-blue-500 inline-block"
+              className="text-blue-500 dark:text-blue-400  inline-block"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
@@ -69,7 +68,7 @@ const Introduction = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-xl text-gray-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             Transforming your supply chain with machine and deep learning
             models. Optimizing planning, stock management, classification, and
@@ -86,7 +85,7 @@ const Introduction = () => {
               className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold relative overflow-hidden group"
             >
               <motion.span
-                className="absolute inset-0 bg-white opacity-20"
+                className="absolute inset-0 bg-white dark:bg-gray-100  opacity-20"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "100%" }}
                 transition={{ duration: 0.5 }}
@@ -96,10 +95,10 @@ const Introduction = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-blue-500 text-blue-500 px-8 py-3 rounded-lg font-semibold relative overflow-hidden group"
+              className="border border-blue-500 text-blue-500 dark:text-blue-400 px-8 py-3 rounded-lg font-semibold relative overflow-hidden group"
             >
               <motion.span
-                className="absolute inset-0 bg-blue-50 opacity-0 group-hover:opacity-20"
+                className="absolute inset-0 bg-blue-50 dark:bg-blue-900 opacity-0 group-hover:opacity-20"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "100%" }}
                 transition={{ duration: 0.5 }}
@@ -138,7 +137,7 @@ const Introduction = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-white p-6 rounded-xl shadow-lg transform-gpu"
+              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg transform-gpu"
             >
               <motion.div
                 className="mb-4"
@@ -148,13 +147,15 @@ const Introduction = () => {
                 {feature.icon}
               </motion.div>
               <motion.h3
-                className="text-xl font-semibold mb-2 text-gray-900"
+                className="text-xl font-semibold mb-2 text-gray-900 dark:text-white"
                 whileHover={{ x: 5 }}
                 transition={{ duration: 0.2 }}
               >
                 {feature.title}
               </motion.h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>

@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -81,7 +81,7 @@ const Footer = () => {
                   href={social.href}
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gray-800 p-3 rounded-full hover:bg-blue-500 transition-colors"
+                  className="bg-gray-800 dark:bg-gray-900 p-3 rounded-full hover:bg-blue-500 transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}

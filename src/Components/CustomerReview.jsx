@@ -55,7 +55,7 @@ const CustomerReviews = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-20">
+    <div className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,10 +63,10 @@ const CustomerReviews = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Discover how we've helped businesses transform their data strategy
           </p>
         </motion.div>
@@ -79,7 +79,7 @@ const CustomerReviews = () => {
           >
             <button
               onClick={() => scroll("left")}
-              className="p-2 rounded-full bg-white shadow-lg text-blue-500 hover:text-blue-600 transition-colors"
+              className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
@@ -92,7 +92,7 @@ const CustomerReviews = () => {
           >
             <button
               onClick={() => scroll("right")}
-              className="p-2 rounded-full bg-white shadow-lg text-blue-500 hover:text-blue-600 transition-colors"
+              className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -115,19 +115,19 @@ const CustomerReviews = () => {
                 key={index}
                 variants={reviewVariants}
                 whileHover="hover"
-                className="flex-shrink-0 w-[350px] bg-white rounded-xl shadow-lg p-6 scroll-snap-align-start"
+                className="flex-shrink-0 w-[350px] bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 scroll-snap-align-start"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-blue-500 mb-4"
+                  className="text-gray-600 dark:text-gray-300 mb-6 min-h-[80px]"
                 >
-                  <Quote className="w-8 h-8" />
+                  <Quote className="w-8 h-8 text-blue-500" />
                 </motion.div>
 
                 <motion.p
-                  className="text-gray-600 mb-6 min-h-[80px]"
+                  className="text-gray-600 dark:text-gray-300  mb-6 min-h-[80px]"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 + 0.2 }}
@@ -147,7 +147,7 @@ const CustomerReviews = () => {
                   />
                   <div>
                     <motion.h4
-                      className="font-semibold text-gray-900"
+                      className="font-semibold text-gray-900 dark:text-white"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 + 0.4 }}
@@ -155,7 +155,7 @@ const CustomerReviews = () => {
                       {review.name}
                     </motion.h4>
                     <motion.p
-                      className="text-gray-500 text-sm"
+                      className="text-gray-500 dark:text-gray-400 text-sm"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 + 0.5 }}
