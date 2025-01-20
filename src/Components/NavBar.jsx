@@ -64,6 +64,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             {[ 
               { name: "Home", id: "introduction" },
+              { name: "Solutions", id: "solutions" },
               { name: "Reviews", id: "reviews" },
               { name: "Contact", id: "contact" },
             ].map((item) => (

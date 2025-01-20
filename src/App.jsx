@@ -6,6 +6,7 @@ import CustomerReviews from "./Components/CustomerReview";
 import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
+import Solutions from "./Components/Solutions";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             <Navbar />
             <section id="introduction">
               <Introduction />
+            </section>
+            <section id="solutions">
+              <Solutions />
             </section>
             <section id="reviews">
               <CustomerReviews />
