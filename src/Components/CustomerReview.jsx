@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { reviews } from "./reviews";
+import { reviews } from "../data/reviews";
 
 const CustomerReviews = () => {
   const scrollRef = useRef(null);
