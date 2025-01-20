@@ -8,11 +8,20 @@ const CustomerReviews = () => {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -400 : 400;
-      scrollRef.current.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
+      const scrollAmount = direction === "left" ? -370 : 370;
+      let scrolled = 0;
+
+      const smoothScroll = setInterval(() => {
+        if (scrolled < Math.abs(scrollAmount)) {
+          scrollRef.current.scrollBy({
+            left: direction === "left" ? -40 : 40,
+            behavior: "auto",
+          });
+          scrolled += 20;
+        } else {
+          clearInterval(smoothScroll);
+        }
+      }, 16);
     }
   };
 
@@ -74,27 +83,23 @@ const CustomerReviews = () => {
         <div className="relative">
           <motion.div
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           >
             <button
               onClick={() => scroll("left")}
               className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-9 h-9" />
             </button>
           </motion.div>
 
           <motion.div
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
           >
             <button
               onClick={() => scroll("right")}
               className="p-2 rounded-full bg-white dark:bg-gray-800 shadow-lg text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-9 h-9" />
             </button>
           </motion.div>
 
@@ -108,6 +113,7 @@ const CustomerReviews = () => {
             style={{
               scrollSnapType: "x mandatory",
               WebkitOverflowScrolling: "touch",
+              scrollBehavior: "smooth",
             }}
           >
             {reviews.map((review, index) => (
