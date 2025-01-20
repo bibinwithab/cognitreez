@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
-import { Menu } from 'lucide-react';
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -14,6 +14,18 @@ const Navbar = () => {
     });
     return () => unsubscribe();
   }, [scrollY]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen]);
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -76,7 +88,20 @@ const Navbar = () => {
         </div>
 
         {isOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-800">
+          <motion.div
+            className="fixed inset-0 bg-gray-200 dark:bg-gray-900 flex flex-col justify-center items-center space-y-6 z-40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{ top: 0, left: 0, height: "100vh", width: "100vw" }}
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-5 right-5 p-2 bg-gray-900/20 hover:bg-gray-900/30 text-gray-900 dark:text-gray-200 rounded-full"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
             {[ 
               { name: "Home", id: "introduction" },
               { name: "Reviews", id: "reviews" },
@@ -86,15 +111,17 @@ const Navbar = () => {
                 key={item.id}
                 onClick={() => {
                   scrollToSection(item.id);
-                  setIsOpen(false); // Close dropdown after selection
+                  setIsOpen(false);
                 }}
-                className="block text-gray-900 dark:text-gray-200 hover:text-blue-500 font-bold"
+                className="text-xl text-gray-900 dark:text-gray-200 hover:text-blue-500 font-bold"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >
                 {item.name}
               </motion.button>
             ))}
             <ThemeToggle />
-          </div>
+          </motion.div>
         )}
       </div>
     </motion.nav>
