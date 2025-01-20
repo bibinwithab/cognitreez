@@ -4,6 +4,7 @@ import Introduction from "./Components/Introduction";
 import BookACall from "./Components/BookACall";
 import CustomerReviews from "./Components/CustomerReview";
 import Navbar from "./Components/NavBar";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <section id="contact">
             <BookACall />
           </section>
+          <Footer />
         </motion.div>
       </AnimatePresence>
     </div>
