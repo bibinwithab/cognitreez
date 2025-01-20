@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { motion, useScroll } from 'framer-motion';
-import { BarChart3 } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +15,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Height of the navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -32,7 +31,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -42,7 +41,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="w-8 h-8" >
-            <img src="../assets/COGNI logo.png" alt="" />
+            <img src="../assets/logo.png" alt="logo" />
             </div>
             <span className="text-xl font-bold text-gray-500">Cognitreez</span>
           </motion.div>
