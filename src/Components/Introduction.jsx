@@ -105,6 +105,15 @@ const Introduction = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border border-blue-500 text-blue-500 dark:text-blue-400 px-8 py-3 rounded-lg font-semibold relative overflow-hidden group"
+              onClick={() => {
+                const element = document.getElementById("solutions");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: "smooth",
+                  });
+                }
+              }}
             >
               <motion.span
                 className="absolute inset-0 bg-blue-50 dark:bg-blue-900 opacity-0 group-hover:opacity-20"
