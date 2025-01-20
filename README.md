@@ -51,10 +51,11 @@ src/
 ## To-Do List
 
 - [x] Implement a gradient background across the entire website.
-- [x] Add a responsive customer reviews carousel.
-- [x] Integrate Framer Motion for animations.
-- [ ] Optimize accessibility features.
-- [ ] Deploy the application to a hosting platform.
+- [x] Add Footer
+- [x] Add Customer Reviews Carousel
+- [x] Add solutions component
+- [x] Add functionality to contact form.
+- [ ] Update the content of the website.
 
 ## Scripts
 
