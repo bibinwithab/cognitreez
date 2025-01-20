@@ -83,6 +83,15 @@ const Introduction = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold relative overflow-hidden group"
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: "smooth",
+                  });
+                }
+              }}
             >
               <motion.span
                 className="absolute inset-0 bg-white dark:bg-gray-100  opacity-20"
