@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
+import { Menu } from 'lucide-react';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useEffect(() => {
@@ -48,7 +50,7 @@ const Navbar = () => {
           </motion.div>
 
           <div className="hidden md:flex space-x-8">
-            {[
+            {[ 
               { name: "Home", id: "introduction" },
               { name: "Reviews", id: "reviews" },
               { name: "Contact", id: "contact" },
@@ -65,7 +67,35 @@ const Navbar = () => {
             ))}
             <ThemeToggle />
           </div>
+
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)}>
+              <Menu className="text-gray-900 dark:text-gray-200" />
+            </button>
+          </div>
         </div>
+
+        {isOpen && (
+          <div className="md:hidden bg-white dark:bg-gray-800">
+            {[ 
+              { name: "Home", id: "introduction" },
+              { name: "Reviews", id: "reviews" },
+              { name: "Contact", id: "contact" },
+            ].map((item) => (
+              <motion.button
+                key={item.id}
+                onClick={() => {
+                  scrollToSection(item.id);
+                  setIsOpen(false); // Close dropdown after selection
+                }}
+                className="block text-gray-900 dark:text-gray-200 hover:text-blue-500 font-bold"
+              >
+                {item.name}
+              </motion.button>
+            ))}
+            <ThemeToggle />
+          </div>
+        )}
       </div>
     </motion.nav>
   );
