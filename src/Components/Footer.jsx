@@ -27,7 +27,7 @@ const Footer = () => {
 
   const socialLinks = [
     {
-      icon: <Linkedin className="w-5 h-5" />,
+      icon: <Linkedin className="w-6 h-6" />,
       href: "https://www.linkedin.com/company/cognitreez/posts/?feedView=all",
       label: "LinkedIn",
     },
@@ -63,7 +63,7 @@ const Footer = () => {
                 <span>info@cognitreez.com</span>
               </motion.a>
               <motion.div
-                className="flex items-center space-x-3 text-gray-400"
+                className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors"
                 whileHover={{ x: 5 }}
               >
                 <MapPin className="w-5 h-5" />
@@ -81,7 +81,7 @@ const Footer = () => {
                   href={social.href}
                   whileHover={{ y: -5, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="bg-gray-800 dark:bg-gray-900 p-3 rounded-full hover:bg-blue-500 transition-colors"
+                  className="bg-gray-800 dark:bg-gray-900 p-3 rounded-xl hover:bg-blue-500 dark:hover:bg-blue-500 transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}
