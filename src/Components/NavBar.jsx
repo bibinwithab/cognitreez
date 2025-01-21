@@ -56,7 +56,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="w-8 h-8">
-              <img src="logo.png" alt="logo" />
+              <img src="t-logo.png" alt="logo" />
             </div>
             <span className="text-xl font-bold text-gray-900 dark:text-gray-200">Cognitreez</span>
           </motion.div>
