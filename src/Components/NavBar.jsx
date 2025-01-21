@@ -71,7 +71,7 @@ const Navbar = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-900 dark:text-gray-200 hover:text-blue-500 font-bold"
+                className="text-gray-900 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-500 font-bold text-xl"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
