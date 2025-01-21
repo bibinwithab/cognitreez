@@ -56,6 +56,10 @@ src/
 - [x] Add solutions component
 - [x] Add functionality to contact form.
 - [ ] Update the content of the website.
+- [ ] Add research paper one sliders - case studies (results to real world).
+- [ ] Add animations elements - supply chain.
+- [ ] Update Solutions page to scroll based instead of click based.
+- [ ] Add Graphs to the website.
 
 ## Scripts
 
