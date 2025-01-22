@@ -6,7 +6,12 @@ export default {
     ],
     darkMode: 'class',
     theme: {
-      extend: {},
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          heading: ['Raleway', 'sans-serif'],
+        },
+      },
     },
     plugins: [],
-  }
+}
