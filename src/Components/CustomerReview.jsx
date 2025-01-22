@@ -14,10 +14,10 @@ const CustomerReviews = () => {
       const smoothScroll = setInterval(() => {
         if (scrolled < Math.abs(scrollAmount)) {
           scrollRef.current.scrollBy({
-            left: direction === "left" ? -40 : 40,
+            left: direction === "left" ? -400 : 400,
             behavior: "auto",
           });
-          scrolled += 20;
+          scrolled += 200;
         } else {
           clearInterval(smoothScroll);
         }
