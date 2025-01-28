@@ -7,6 +7,7 @@ import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 import Solutions from "./Components/Solutions";
+import CaseStudies from "./Components/CaseStudies";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             <section id="introduction">
               <Introduction />
             </section>
+            <section id="caseStudies">
+            <CaseStudies />
+          </section>
             <section id="solutions">
               <Solutions />
             </section>
