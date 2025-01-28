@@ -38,11 +38,19 @@ This is a modern web application built with React, TailwindCSS, and Framer Motio
 src/
 ├── Components/
 │   ├── BookACall.jsx         # Component for booking a call
+│   ├── CaseStudies.jsx       # Component for displaying case studies
+│   ├── CustomerReview.jsx     # Component for customer reviews carousel
 │   ├── Footer.jsx            # Footer component
-│   ├── CustomerReview.jsx    # Component for customer reviews carousel
 │   ├── Introduction.jsx      # Introduction section with gradient background
 │   ├── NavBar.jsx            # Navigation bar component
 │   ├── Scroll.jsx            # Scroll indicator component
+│   ├── Solutions.jsx         # Component for displaying solutions
+│   ├── ThemeToggle.jsx       # Component for toggling themes
+├── context/
+│   ├── ThemeContext.jsx      # Context for theme management
+├── data/
+│   ├── reviews.js            # Data for customer reviews
+│   ├── solutions.js          # Data for solutions
 ├── App.jsx                   # Main application component
 ├── index.css                 # TailwindCSS configuration
 ├── main.jsx                  # Entry point of the app
@@ -64,4 +72,3 @@ src/
 - `npm run dev`: Start the development server.
 - `npm run build`: Build the project for production.
 - `npm run preview`: Preview the production build locally.
-
