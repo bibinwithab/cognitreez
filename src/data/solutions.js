@@ -1,26 +1,46 @@
 const solutions = [
   {
     id: 1,
-    title: "Data Visualization",
-    shortDescription: "Clear and actionable insights from complex data.",
+    title: " Network Optimization",
+    shortDescription:
+      "Optimize supply chain routes for better efficiency and cost savings.",
     longDescription:
-      "Our data visualization tools turn your raw data into meaningful, interactive dashboards that help you make informed decisions quickly.",
+      "We use AI to design the most efficient routes for your supply chain operations, saving time and reducing expenses.",
     image: "https://via.placeholder.com/400",
   },
   {
     id: 2,
-    title: "Predictive Analytics",
-    shortDescription: "Forecast trends with data-driven predictions.",
+    title: "Safety Stock Management",
+    shortDescription: "Avoid stockouts while minimizing excess inventory.",
     longDescription:
-      "Leverage machine learning to anticipate market trends, customer behavior, and other key insights that give you a competitive edge.",
+      "Our system predicts the right amount of stock to keep, so you never run out of products or waste money on unnecessary storage.",
     image: "https://via.placeholder.com/400",
   },
   {
     id: 3,
-    title: "Real-Time Analytics",
-    shortDescription: "Analyze data as it happens.",
+    title: "Demand Planning",
+    shortDescription:
+      "Accurately forecast future demand using machine learning",
     longDescription:
-      "Get immediate insights into your operations and performance, enabling faster decisions and more efficient processes.",
+      "We help you predict how much of your product customers will need, so you can plan production and inventory accordingly.",
+    image: "https://via.placeholder.com/400",
+  },
+  {
+    id: 4,
+    title: "Research to Real-World Transition",
+    shortDescription:
+      "Bridging the gap between theoretical insights and practical implementations.",
+    longDescription:
+      "We take research papers on AI and supply chain and turn them into real, usable solutions for businesses.",
+    image: "https://via.placeholder.com/400",
+  },
+  {
+    id: 5,
+    title: "Consulting Services",
+    shortDescription:
+      "Personalized guidance to streamline your supply chain operations.",
+    longDescription:
+      "Our experts analyze your current processes and provide actionable strategies to make your supply chain more efficient.",
     image: "https://via.placeholder.com/400",
   },
 ];

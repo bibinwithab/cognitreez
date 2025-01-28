@@ -55,24 +55,25 @@ const Introduction = () => {
             variants={itemVariants}
             className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
           >
-            Transform Your Data Into
+            Revolutionizing Supply Chains with
             <motion.span
               className="text-blue-500 dark:text-blue-400  inline-block"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
               {" "}
-              Actionable Insights
+              AI-Driven Precision
             </motion.span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-l text-gray-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Transforming your supply chain with machine and deep learning
-            models. Optimizing planning, stock management, classification, and
-            demand forecasting.
+            Cognitreez delivers advanced supply chain solutions using AI and
+            machine learning. We help businesses optimize operations, cut costs,
+            and improve efficiency. Bridging research with real-world
+            applications, we transform supply chains.
           </motion.p>
 
           <motion.div
@@ -136,19 +137,21 @@ const Introduction = () => {
           {[
             {
               icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-              title: "Data Visualization",
+              title: "Supply Chain Optimization",
               description:
-                "Transform complex data into clear, actionable insights",
+                "Streamline your operations and reduce costs using AI and machine learning technologies.",
             },
             {
               icon: <TrendingUp className="w-8 h-8 text-blue-500" />,
-              title: "Predictive Analytics",
-              description: "Forecast trends and make data-driven decisions",
+              title: "AI-Driven Insights",
+              description:
+                "Empower your business with actionable insights that bridge the gap between research and real-world applications.",
             },
             {
               icon: <LineChart className="w-8 h-8 text-blue-500" />,
-              title: "Real-time Analytics",
-              description: "Monitor and analyze data as it happens",
+              title: "Operational Efficiency",
+              description:
+                "Transform supply chain processes to drive efficiency and achieve measurable results.",
             },
           ].map((feature, index) => (
             <motion.div

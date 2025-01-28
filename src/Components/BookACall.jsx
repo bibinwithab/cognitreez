@@ -24,7 +24,7 @@ const BookACall = () => {
 
   const generateMailtoLink = ({ name, company, date, time }) => {
     const recipient = "info@cognitreez.com";
-    const subject = encodeURIComponent("Appointment Request");
+    const subject = encodeURIComponent("Schedule a Call with Cognitreez");
     const body = encodeURIComponent(
       `Hello,
 

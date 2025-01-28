@@ -64,6 +64,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8">
             {[ 
               { name: "Home", id: "introduction" },
+              { name: "Research to Real World", id: "caseStudies" },
               { name: "Solutions", id: "solutions" },
               { name: "Reviews", id: "reviews" },
               { name: "Contact", id: "contact" },
@@ -71,7 +72,7 @@ const Navbar = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-900 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-500 font-bold text-xl"
+                className="text-gray-900 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-500 font-light text-xl"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >

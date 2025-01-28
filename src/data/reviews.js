@@ -1,21 +1,21 @@
 export const reviews = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
-    company: "TechStart Inc.",
+    name: "Rajesh Verma",
+    role: "Supply Chain Manager",
+    company: "Xyz Industries",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&h=100",
+      "",
     review:
-      "The analytics insights provided transformed our decision-making process. We've seen a 40% increase in customer engagement.",
+      "Cognitreez transformed our supply chain operations with their AIpowered solutions. Highly recommend!",
   },
   {
-    name: "Michael Chen",
-    role: "CTO, DataFlow Systems",
-    company: "DataFlow Systems",
+    name: "Ananya Sharma",
+    role: "Summer Intern",
+    company: "Cognitreez",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100",
+      "",
     review:
-      "Exceptional data visualization capabilities. Our team can now spot trends and patterns we never saw before.",
+      "The internship was a great learning experience. I got hands-on exposure to supply chain technologies.",
   },
   {
     name: "Emily Rodriguez",
