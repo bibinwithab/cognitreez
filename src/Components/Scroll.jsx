@@ -16,6 +16,7 @@ const Scroll = () => {
         backgroundColor: "#0077B5",
         zIndex: 1000,
       }}
+
     ></motion.div>
   );
 };
