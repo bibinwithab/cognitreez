@@ -9,6 +9,7 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Solutions from "./Components/Solutions";
 import CaseStudies from "./Components/CaseStudies";
 import TruckScrollAnimation from "./Components/TruckScrollAnimation";
+import MascotScrollAnimation from "./Components/MascotScrollAnimation";
 
 function App() {
   return (
@@ -20,12 +21,14 @@ function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="min-h-screen bg-gray-800"
+            className="min-h-screen bg-gray-100"
           >
             <Navbar />
             <section id="introduction">
               <Introduction />
             </section>
+            <MascotScrollAnimation />
+
             <section id="caseStudies">
               <CaseStudies />
             </section>

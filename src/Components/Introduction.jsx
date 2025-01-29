@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { BarChart3, TrendingUp, LineChart } from "lucide-react";
-import MascotScrollAnimation from "./MascotScrollAnimation"; // Import the new component
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -76,7 +75,6 @@ const Introduction = () => {
             and improve efficiency. Bridging research with real-world
             applications, we transform supply chains.
           </motion.p>
-
           <motion.div
             variants={itemVariants}
             className="flex justify-center gap-4"
@@ -128,8 +126,6 @@ const Introduction = () => {
           </motion.div>
         </motion.div>
 
-        <MascotScrollAnimation /> 
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -137,7 +133,7 @@ const Introduction = () => {
           viewport={{ once: true }}
           className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8"
         >
-          {[ 
+          {[
             {
               icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
               title: "Supply Chain Optimization",
