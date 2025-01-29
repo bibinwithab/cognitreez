@@ -26,12 +26,19 @@ const BookACall = () => {
     const recipient = "info@cognitreez.com";
     const subject = encodeURIComponent("Schedule a Call with Cognitreez");
     const body = encodeURIComponent(
-      `Hello,
-
-I am ${name} from ${company} would like to book a call on ${date} at ${time}.
-Please let me know if this time works for you.
-
-Thank you!`
+      `Dear Cognitreez Team,
+I hope you are doing well. My name is ${name}, and I am representing ${company}. I would like to schedule a call with your team to discuss potential collaboration
+opportunities.
+Details of the Call:
+• Preferred Date: ${date}
+• Preferred Time: ${time}
+Please confirm the availability for the above-mentioned time slot, or suggest an alternative that
+works for you.
+Looking forward to the conversation.
+Best regards,
+${name}
+${company}
+`
     );
 
     return `mailto:${recipient}?subject=${subject}&body=${body}`;
