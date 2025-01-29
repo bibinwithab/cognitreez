@@ -26,7 +26,7 @@ const itemVariants = {
 
 const Introduction = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 text-gray-900 dark:text-white overflow-hidden">
       <motion.div
         className="absolute inset-0 opacity-5"
         animate={{
@@ -44,7 +44,7 @@ const Introduction = () => {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
