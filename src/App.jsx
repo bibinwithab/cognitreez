@@ -8,8 +8,6 @@ import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 import Solutions from "./Components/Solutions";
 import CaseStudies from "./Components/CaseStudies";
-import TruckScrollAnimation from "./Components/TruckScrollAnimation";
-import MascotScrollAnimation from "./Components/MascotScrollAnimation";
 
 function App() {
   return (
@@ -27,8 +25,6 @@ function App() {
             <section id="introduction">
               <Introduction />
             </section>
-            <MascotScrollAnimation />
-
             <section id="caseStudies">
               <CaseStudies />
             </section>
@@ -40,7 +36,6 @@ function App() {
             </section>
             <section id="contact">
               <BookACall />
-              <TruckScrollAnimation />
             </section>
             <Footer />
           </motion.div>

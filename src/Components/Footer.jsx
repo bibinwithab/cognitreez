@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Linkedin } from "lucide-react";
+import { Mail, MapPin, Linkedin, FileDown } from "lucide-react";
 
 const Footer = () => {
   const containerVariants = {
@@ -42,15 +42,17 @@ const Footer = () => {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Company Info */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-2xl font-bold mb-6">Cognitreez</h3>
             <p className="text-gray-400 max-w-xs">
-            Bridging the gap between theoretical insights and practical
-            implementations.
+              Bridging the gap between theoretical insights and practical
+              implementations.
             </p>
           </motion.div>
 
+          {/* Contact Info */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4">
@@ -72,6 +74,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
+          {/* Follow Us */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-lg font-semibold mb-6">Follow Us</h3>
             <div className="flex space-x-4">
@@ -88,6 +91,21 @@ const Footer = () => {
                 </motion.a>
               ))}
             </div>
+          </motion.div>
+
+          {/* Download Brochure */}
+          <motion.div variants={itemVariants} className="space-y-4">
+            <h3 className="text-lg font-semibold mb-6">About Us</h3>
+            <motion.a
+              href="/brochure.pdf"
+              download="Cognitreez_Brochure.pdf"
+              whileHover={{ y: -5, scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center space-x-4 bg-gray-800 text-white py-2 px-4 rounded-xl shadow-md hover:bg-blue-500 transition-all"
+            >
+              <FileDown className="w-5 h-10" />
+              <span>Download Brochure</span>
+            </motion.a>
           </motion.div>
         </div>
 

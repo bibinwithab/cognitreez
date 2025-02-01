@@ -179,6 +179,14 @@ const Introduction = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        <motion.img
+          id="mascot-image"
+          src="/mascot.png"
+          alt="Mascot"
+          className="absolute right-0 top-1/4 w-1/4 h-auto md:w-1/3 lg:w-1/4"
+          whileHover={{ scale: 1.1 }}
+        />
       </div>
     </div>
   );
