@@ -121,7 +121,7 @@ const CaseStudies = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-xl font-bold text-white dark:text-white mb-2">
                       {study.title}
                     </h3>
                     <div className="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
