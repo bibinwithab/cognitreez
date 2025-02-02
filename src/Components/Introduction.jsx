@@ -68,7 +68,7 @@ const Introduction = () => {
 
           <motion.p
             variants={itemVariants}
-            className="text-l text-gray-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-l z-2 text-gray-900 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
           >
             Cognitreez delivers advanced supply chain solutions using AI and
             machine learning. We help businesses optimize operations, cut costs,
@@ -184,7 +184,7 @@ const Introduction = () => {
           id="mascot-image"
           src="/mascot.png"
           alt="Mascot"
-          className="absolute right-1 z-1000 top-1/4 w-1/4 h-auto md:w-1/3 lg:w-1/4"
+          className="-z-10 absolute right-4 sm:-right-10 top-1/4 w-1/4 h-auto md:w-1/3 lg:w-1/4"
           whileHover={{ scale: 1.1 }}
         />
       </div>
