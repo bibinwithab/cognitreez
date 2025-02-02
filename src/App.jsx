@@ -2,7 +2,6 @@ import { motion, AnimatePresence } from "motion/react";
 import Scroll from "./Components/Scroll";
 import Introduction from "./Components/Introduction";
 import BookACall from "./Components/BookACall";
-import CustomerReviews from "./Components/CustomerReview";
 import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -31,9 +30,7 @@ function App() {
             <section id="solutions">
               <Solutions />
             </section>
-            <section id="reviews">
-              <CustomerReviews />
-            </section>
+
             <section id="contact">
               <BookACall />
             </section>

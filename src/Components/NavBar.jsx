@@ -68,7 +68,6 @@ const Navbar = () => {
               { name: "Home", id: "introduction" },
               { name: "Research to Real World", id: "caseStudies" },
               { name: "Solutions", id: "solutions" },
-              { name: "Reviews", id: "reviews" },
               { name: "Contact", id: "contact" },
             ].map((item) => (
               <motion.button
@@ -108,8 +107,8 @@ const Navbar = () => {
 
             {[
               { name: "Home", id: "introduction" },
+              { name: "Research to Real World", id: "caseStudies" },
               { name: "Solutions", id: "solutions" },
-              { name: "Reviews", id: "reviews" },
               { name: "Contact", id: "contact" },
             ].map((item) => (
               <motion.button
