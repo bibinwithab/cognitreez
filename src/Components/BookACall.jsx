@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
 import { useState } from "react";
-
 import { Clock, Calendar, Phone } from "lucide-react";
 
 const BookACall = () => {
@@ -47,6 +46,26 @@ ${company}
   return (
     <div className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* New Sections */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="flex justify-between mb-12">
+          <div className="w-1/2">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Purpose</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+            At Cognitreez, we harness AI to redefine supply chain operations. Our mission is to make cutting-edge solutions accessible, ensuring efficiency, scalability, and ease of use. Committed to innovation, we empower businesses with intelligent, data-driven strategies, driving the future of supply chain excellence.
+            </p>
+          </div>
+          <div className="w-1/2 text-right">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Team</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
+            Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency.
+            </p>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +89,7 @@ ${company}
           <div className="grid md:grid-cols-2">
             <div className="p-8 bg-gradient-to-br from-blue-500 to-blue-600 text-white">
               <h3 className="text-2xl font-bold mb-6">What You'll Get</h3>
-              {[
+              {[ 
                 {
                   icon: <Clock className="w-5 h-5" />,
                   text: "30-minute strategy session",
