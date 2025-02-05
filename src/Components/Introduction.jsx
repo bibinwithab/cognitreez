@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { BarChart3, TrendingUp, LineChart } from "lucide-react";
+import { BarChart3, TrendingUp, LineChart, ChevronDown } from "lucide-react"; // Importing the down arrow icon
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -122,6 +122,22 @@ const Introduction = () => {
                 transition={{ duration: 0.5 }}
               />
               Learn More
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border border-blue-500 text-blue-500 dark:text-blue-400 px-4 py-2 rounded-lg flex items-center"
+              onClick={() => {
+                const element = document.getElementById("contact");
+                if (element) {
+                  window.scrollTo({
+                    top: element.offsetTop,
+                    behavior: "smooth",
+                  });
+                }
+              }}
+            >
+              <ChevronDown className="w-5 h-5" /> {/* Down arrow icon */}
             </motion.button>
           </motion.div>
         </motion.div>

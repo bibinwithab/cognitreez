@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 import Solutions from "./Components/Solutions";
 import CaseStudies from "./Components/CaseStudies";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             </section>
 
             <section id="contact">
+              <About />
               <BookACall />
             </section>
             <Footer />

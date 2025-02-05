@@ -26,13 +26,13 @@ const BookACall = () => {
     const subject = encodeURIComponent("Schedule a Call with Cognitreez");
     const body = encodeURIComponent(
       `Dear Cognitreez Team,
-I hope you are doing well. My name is ${name}, and I am representing ${company}. I would like to schedule a call with your team to discuss potential collaboration
-opportunities.
+I hope you are doing well. My name is ${name}, and I am representing ${company}. I would like to schedule a call with your team to discuss potential collaboration opportunities.
 Details of the Call:
 • Preferred Date: ${date}
 • Preferred Time: ${time}
-Please confirm the availability for the above-mentioned time slot, or suggest an alternative that
-works for you.
+Please confirm the availability for the above-mentioned time slot, or suggest an alternative that works for you.
+Looking forward to the conversation.
+Best regards,
 Looking forward to the conversation.
 Best regards,
 ${name}
@@ -46,25 +46,7 @@ ${company}
   return (
     <div className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* New Sections */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="flex justify-between mb-12">
-          <div className="w-1/2">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Purpose</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-            At Cognitreez, we harness AI to redefine supply chain operations. Our mission is to make cutting-edge solutions accessible, ensuring efficiency, scalability, and ease of use. Committed to innovation, we empower businesses with intelligent, data-driven strategies, driving the future of supply chain excellence.
-            </p>
-          </div>
-          <div className="w-1/2 text-right">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Team</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-            Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency.
-            </p>
-          </div>
-        </motion.div>
+  
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
