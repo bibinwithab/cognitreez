@@ -42,12 +42,56 @@ ${company}
 
     return `mailto:${recipient}?subject=${subject}&body=${body}`;
   };
-
+  const sections = [
+    {
+      title: "Our Purpose",
+      content: "At Cognitreez, we harness AI to redefine supply chain operations. Our mission is to make cutting-edge solutions accessible, ensuring efficiency, scalability, and ease of use. Committed to innovation, we empower businesses with intelligent, data-driven strategies, driving the future of supply chain excellence."
+    },
+    {
+      title: "Our Team",
+      content: "Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency."
+    },
+    {
+      title: "Our Values",
+      content: "Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency."
+    },
+    {
+      title: "Our Research",
+      content: "Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency."
+    }
+  ];
   return (
     <div className="bg-gray-50 dark:bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   
-
+<motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="mx-auto bg-gray-50 dark:bg-gray-900"
+    >
+      <div className="overflow-x-scroll relative">
+        <div className="flex px-4 pb-8 w-max mx-auto">
+          {sections.map((section, index) => (
+            <div 
+              key={index} 
+              className={`w-[400px] flex-shrink-0 snap-center ${
+                index !== sections.length - 1 ? 'border-r border-gray-300 dark:border-gray-600' : ''
+              }`}
+            >
+              <div className="pr-8 pl-8 text-left">
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                  {section.title}
+                </h2>
+                <p className="text-l text-gray-600 dark:text-gray-300">
+                  {section.content}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
