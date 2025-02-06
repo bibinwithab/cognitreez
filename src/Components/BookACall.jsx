@@ -56,12 +56,12 @@ ${company}
     {
       title: "Our Values",
       content:
-        "Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency.",
+        "Our values are the foundation of everything we do. We are committed to innovation, continuously pushing boundaries to deliver cutting-edge, future-ready solutions. Guided by integrity, we uphold transparency and ethical AI practices in every aspect of our work. We believe in the power of collaboration, working together with partners to drive collective success.",
     },
     {
       title: "Our Research",
       content:
-        "Our team brings together specialists in analytics, data science, and business strategy, combining expertise to deliver intelligent, data-driven solutions for real-world impact. With a passion for innovation, we transform complex challenges into actionable insights that drive growth and efficiency.",
+        "Innovation is at the core of everything we do. Our research focuses on leveraging AI, data science, and advanced analytics to solve real-world challenges. We explore cutting-edge methodologies to optimize decision-making, enhance automation, and drive efficiency across industries",
     },
   ];
   return (
