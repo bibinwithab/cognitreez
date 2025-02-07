@@ -55,7 +55,7 @@ const Introduction = () => {
             variants={itemVariants}
             className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white"
           >
-            Revolutionizing Supply Chains with
+            Supply Chains with
             <motion.span
               className="text-blue-500 dark:text-blue-400  inline-block"
               animate={{ scale: [1, 1.05, 1] }}
