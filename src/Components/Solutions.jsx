@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { X } from "lucide-react"; 
 import solutions from "../data/solutions";
 
 const Solutions = () => {
@@ -73,9 +74,9 @@ const Solutions = () => {
           >
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 text-gray-900 dark:text-white"
+              className="absolute top-1 right-1 text-gray-900 dark:text-white flex items-center justify-center h-10 w-10" 
             >
-              ✖
+              <X className="h-9 w-9" /> 
             </button>
             <img
               src={selectedSolution.image}

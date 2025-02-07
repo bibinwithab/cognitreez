@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { caseStudies } from "../data/caseStudies";
 
@@ -38,7 +38,7 @@ const CaseStudies = () => {
       y: 0,
       scale: 1,
       transition: {
-        type: "spring",
+        type: "smooth",
         stiffness: 100,
         damping: 15,
       },
@@ -47,8 +47,8 @@ const CaseStudies = () => {
       scale: 1.02,
       y: -5,
       transition: {
-        type: "spring",
-        stiffness: 400,
+        type: "smooth",
+        stiffness: 100,
         damping: 10,
       },
     },
