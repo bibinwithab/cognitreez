@@ -7,6 +7,7 @@ import Footer from "./Components/Footer";
 import { ThemeProvider } from "./context/ThemeContext";
 import Solutions from "./Components/Solutions";
 import CaseStudies from "./Components/CaseStudies";
+import CaseStudiesImages from "./Components/CaseStudiesImages";
 
 function App() {
   return (
@@ -27,10 +28,12 @@ function App() {
             <section id="caseStudies">
               <CaseStudies />
             </section>
+            <section id="caseStudiesImages">
+              <CaseStudiesImages />
+            </section>
             <section id="solutions">
               <Solutions />
             </section>
-
             <section id="contact">
               <BookACall />
             </section>
