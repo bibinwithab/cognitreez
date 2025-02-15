@@ -22,7 +22,7 @@ const BookACall = () => {
   };
 
   const generateMailtoLink = ({ name, company, date, time }) => {
-    const recipient = "info@cognitreez.com";
+    const recipient = "marketing@cognitreez.com";
     const subject = encodeURIComponent("Schedule a Call with Cognitreez");
     const body = encodeURIComponent(
       `Dear Cognitreez Team,
