@@ -57,19 +57,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-4">
               <motion.a
-                href="mailto:info@cognitreez.com"
+                href="mailto:marketing@cognitreez.com"
                 className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors"
                 whileHover={{ x: 5 }}
               >
                 <Mail className="w-5 h-5" />
-                <span>info@cognitreez.com</span>
+                <span>marketing@cognitreez.com</span>
               </motion.a>
               <motion.div
                 className="flex items-center space-x-3 text-gray-400 hover:text-blue-400 transition-colors"
                 whileHover={{ x: 5 }}
               >
                 <MapPin className="w-5 h-5" />
-                <span>Novi, Michigan</span>
+                <span>Michigan, USA</span>
               </motion.div>
             </div>
           </motion.div>
